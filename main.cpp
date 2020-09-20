@@ -1,6 +1,5 @@
 /**************************************************************
 * Class: CSC-600-01 # Fall 2020
-* Group Name: Cabinet
 * Name: Basic Data Types and Operations
 * Student ID: 915173797
 * Name: Benjamin Lewis
@@ -52,7 +51,7 @@ void integerDataTypePositive (int a, int b)
 {
     int c = a + b;
     std::cout << "\nint a = " << a << std::endl;
-    std::cout << "int b = " << b << std::endl;
+    std::cout << "int b = .000000000000001" << std::endl;
     std::cout << "The answer mathematically should be a + b > 0 since both a && b > 0" << std::endl;
     std::cout << "a + b = " << c << std::endl;
 }
