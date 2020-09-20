@@ -10,9 +10,10 @@
 
 #include <iostream>
 
-unsigned int unsignedIntegerDataType(unsigned int, unsigned int);
-int integerDataTypePositive(int, int);
-int integerDataTypeNegative(int, int);
+void unsignedIntegerDataType(unsigned int, unsigned int);
+void integerDataTypePositive(int, int);
+void integerDataTypeNegative(int, int);
+void doubleDataType(double, double);
 
 int main()
 {
@@ -30,10 +31,14 @@ int main()
     d = -1;
     integerDataTypeNegative(c, d);
 
+    // double's
+    double e = 1;
+    double f = .000000000000001;
+    doubleDataType(e, f);
 
 }
 //  Unsigned int in C++ is from -4294967296 to 4294967295
-unsigned int unsignedIntegerDataType (unsigned int a, unsigned int b)
+void unsignedIntegerDataType (unsigned int a, unsigned int b)
 {
     unsigned int c = a + b;
     std::cout << "unsigned int a = " << a << std::endl;
@@ -43,7 +48,7 @@ unsigned int unsignedIntegerDataType (unsigned int a, unsigned int b)
 }
 
 //  Unsigned int in C++ is from -2147483648 to 2147483647
-int integerDataTypePositive (int a, int b)
+void integerDataTypePositive (int a, int b)
 {
     int c = a + b;
     std::cout << "\nint a = " << a << std::endl;
@@ -52,11 +57,27 @@ int integerDataTypePositive (int a, int b)
     std::cout << "a + b = " << c << std::endl;
 }
 
-int integerDataTypeNegative (int a, int b)
+void integerDataTypeNegative (int a, int b)
 {
     int c = a + b;
     std::cout << "\nint a = " << a << std::endl;
     std::cout << "int b = " << b << std::endl;
     std::cout << "The answer mathematically should be a + b < 0 since both a && b < 0" << std::endl;
     std::cout << "a + b = " << c << std::endl;
+}
+
+void doubleDataType (double a, double b)
+{
+    double c = a + b;
+    std::string boolStatement;
+    boolStatement = "false";
+    if (bool(c == 1) == 0)
+    {
+        boolStatement = "true";
+    }
+    std::cout << "\ndouble a = " << a << std::endl;
+    std::cout << "double b = " << b << std::endl;
+    std::cout << "The answer mathematically should be a + b > 1" << std::endl;
+    std::cout << "a + b = " << c << std::endl;
+    std::cout << "a + b == 1? " << boolStatement << std::endl;
 }
