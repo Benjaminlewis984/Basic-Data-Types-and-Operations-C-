@@ -1,0 +1,3 @@
+/Users/benjaminlewis/CSC 600/Basic-Data-Types-and-Operations-C-/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/benjaminlewis/CSC 600/Basic-Data-Types-and-Operations-C-/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/benjaminlewis/CSC 600/Basic-Data-Types-and-Operations-C-/cmake-build-debug/CMakeFiles/Basic-Data-Types-and-Operations-C++.dir
