@@ -50,6 +50,14 @@ int main()
     std::cout << "Memory size of 1 = " << sizeof(1) << std::endl;
     std::cout << "Memory size of '1' = " << sizeof('1') << std::endl;
     std::cout << "Memory size of \"1\" = " << sizeof("1") << std::endl;
+
+    // Precision of Digits
+    double j = 1.;
+    double k = 3.;
+    std::cout.precision(20);
+    std::cout << "1./3. = " << std::fixed << (j / k) << std::endl;
+
+
 }
 
 //  Unsigned int in C++ is from -4294967296 to 4294967295
