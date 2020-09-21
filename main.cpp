@@ -159,8 +159,8 @@ void displayAscii()
         inc = rows;
         while(inc <= 127)
         {
-                std::cout << std::hex << std::setw(2) << std::setfill('0')
-                          << inc << "= " << std::setw(4) << std::setfill(' ') << char(inc) << " | ";
+            std::cout << std::hex << std::setw(2) << std::setfill('0')
+                      << inc << "= " << std::setw(4) << std::setfill(' ') << char(inc) << " | ";
             inc+=32;
         }
 
