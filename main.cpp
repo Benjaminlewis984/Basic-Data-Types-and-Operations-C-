@@ -18,57 +18,81 @@ void squareRoot(double);
 
 int main()
 {
-    std::cout << "Hello World!" << std::endl;
-    //  Unsigned int's
-    unsigned int a = 4294967295;
-    unsigned int b = 1;
-    unsignedIntegerDataType(a, b);
+    { //Segment 1
+        //  Unsigned int's
+        unsigned int a = 4294967295;
+        unsigned int b = 1;
+        unsignedIntegerDataType(a, b);
+    }
 
-    // int's
-    int c = 2147483647;
-    int d = 1;
-    integerDataTypePositive(c, d);
-    c = -2147483648;
-    d = -1;
-    integerDataTypeNegative(c, d);
+    { //Segment 2
+        // int's
+        int a = 2147483647;
+        int b = 1;
+        integerDataTypePositive(a, b);
+    }
 
-    // double's
-    double e = 1;
-    double f = .000000000000001;
-    doubleDataType(e, f);
+    { // Segment 3
+        int a = -2147483648;
+        int b = -1;
+        integerDataTypeNegative(a, b);
+    }
 
-    double g = 1e-30;
-    double h = 1e+30;
-    double i = -1e+30;
-    associativity(g, h, i);
 
-    // Power functions
-    std::cout << "pow(-2., 3) = " << pow(-2,3) << std::endl;
-    std::cout << "pow(-2., 3.0) = " << pow(-2,3) << std::endl;
-    std::cout << "pow(-2., 3.00000000001) = " << pow(-2,3) << std::endl;
+    { //Segment 4
+        // double's
+        double a = 1;
+        double b = .000000000000001;
+        doubleDataType(a, b);
+    }
 
-    // Memory size
-    std::cout << "Memory size of 1. = " << sizeof(1.) << std::endl;
-    std::cout << "Memory size of 1.F = " << sizeof(1.F) << std::endl;
-    std::cout << "Memory size of 1 = " << sizeof(1) << std::endl;
-    std::cout << "Memory size of '1' = " << sizeof('1') << std::endl;
-    std::cout << "Memory size of \"1\" = " << sizeof("1") << std::endl;
+    { // Segment 5}
+        double a = 1e-30;
+        double b = 1e+30;
+        double c = -1e+30;
+        associativity(a, b, c);
+    }
 
-    // Precision of Digits
-    double j = 1.;
-    double k = 3.;
-    std::cout.precision(20);
-    std::cout << "1./3. = " << std::fixed << (j / k) << std::endl;
-    std::cout << "The digits that are 3 repeating are correct. Once the precision reaches the double limit "
-                 "(which is after the 3's) the program will generate random, inaccurate numbers." << std::endl;
+    { // Segment 6
+        // Power functions
+        std::cout << "\npow(-2., 3) = " << pow(-2, 3) << std::endl;
+        std::cout << "pow(-2., 3.0) = " << pow(-2, 3) << std::endl;
+        std::cout << "pow(-2., 3.00000000001) = " << pow(-2, 3) << std::endl;
+    }
 
-    // Displaying all printable characters on ASCII table
-    displayAscii();
+    { // Segment 7
+        // Memory size
+        std::cout << "\nMemory size of 1. = " << sizeof(1.) << std::endl;
+        std::cout << "Memory size of 1.F = " << sizeof(1.F) << std::endl;
+        std::cout << "Memory size of 1 = " << sizeof(1) << std::endl;
+        std::cout << "Memory size of '1' = " << sizeof('1') << std::endl;
+        std::cout << "Memory size of \"1\" = " << sizeof("1") << std::endl;
+    }
 
-    // Creating my own square root function
-    double z = 2.;
-    squareRoot(z);
+    { // Segment 8
+        // Precision of Digits
+        double a = 1.;
+        double b = 3.;
+        std::cout.precision(20);
+        std::cout << "\n1./3. = " << std::fixed << (a / b) << std::endl;
+        std::cout << "The digits that are 3 repeating are correct. Once the precision reaches the double limit "
+                     "(which is after the 3's) the program will generate random, inaccurate numbers." << std::endl;
+    }
 
+    { // Segment 9
+        // Displaying all printable characters on ASCII table
+        std::cout << "\n" << std::endl;
+        displayAscii();
+    }
+
+    { // Segment 10
+        // Creating my own square root function
+        double z = 2.;
+        std::cout << "\n" << std::endl;
+        squareRoot(z);
+    }
+
+    return 0;
 }
 
 //  Unsigned int in C++ is from -4294967296 to 4294967295
@@ -135,8 +159,8 @@ void displayAscii()
         inc = rows;
         while(inc <= 127)
         {
-                std::cout << std::hex << std::setw(2) << std::setfill('0')
-                          << inc << "= " << std::setw(4) << std::setfill(' ') << char(inc) << " | ";
+            std::cout << std::hex << std::setw(2) << std::setfill('0')
+                      << inc << "= " << std::setw(4) << std::setfill(' ') << char(inc) << " | ";
             inc+=32;
         }
 
