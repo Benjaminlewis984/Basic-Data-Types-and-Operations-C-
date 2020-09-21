@@ -55,14 +55,16 @@ int main()
 
     { // Segment 6
         // Power functions
-        std::cout << "\npow(-2., 3) = " << pow(-2, 3) << std::endl;
+        std::cout << "\nSegment 6" << std::endl;
+        std::cout << "pow(-2., 3) = " << pow(-2, 3) << std::endl;
         std::cout << "pow(-2., 3.0) = " << pow(-2, 3) << std::endl;
         std::cout << "pow(-2., 3.00000000001) = " << pow(-2, 3) << std::endl;
     }
 
     { // Segment 7
         // Memory size
-        std::cout << "\nMemory size of 1. = " << sizeof(1.) << std::endl;
+        std::cout << "\nSegment 7" << std::endl;
+        std::cout << "Memory size of 1. = " << sizeof(1.) << std::endl;
         std::cout << "Memory size of 1.F = " << sizeof(1.F) << std::endl;
         std::cout << "Memory size of 1 = " << sizeof(1) << std::endl;
         std::cout << "Memory size of '1' = " << sizeof('1') << std::endl;
@@ -73,22 +75,23 @@ int main()
         // Precision of Digits
         double a = 1.;
         double b = 3.;
+        std::cout << "\nSegment 8" << std::endl;
         std::cout.precision(20);
-        std::cout << "\n1./3. = " << std::fixed << (a / b) << std::endl;
+        std::cout << "1./3. = " << std::fixed << (a / b) << std::endl;
         std::cout << "The digits that are 3 repeating are correct. Once the precision reaches the double limit "
                      "(which is after the 3's) the program will generate random, inaccurate numbers." << std::endl;
     }
 
     { // Segment 9
         // Displaying all printable characters on ASCII table
-        std::cout << "\n" << std::endl;
+        std::cout << "\nSegment 9" << std::endl;
         displayAscii();
     }
 
     { // Segment 10
         // Creating my own square root function
         double z = 2.;
-        std::cout << "\n" << std::endl;
+        std::cout << "\nSegment 10" << std::endl;
         squareRoot(z);
     }
 
@@ -99,6 +102,7 @@ int main()
 void unsignedIntegerDataType (unsigned int a, unsigned int b)
 {
     unsigned int c = a + b;
+    std::cout << "Segment 1" << std::endl;
     std::cout << "unsigned int a = " << a << std::endl;
     std::cout << "unsigned int b = " << b << std::endl;
     std::cout << "The answer mathematically should be a + b > 0 since both a && b > 0" << std::endl;
@@ -109,7 +113,8 @@ void unsignedIntegerDataType (unsigned int a, unsigned int b)
 void integerDataTypePositive (int a, int b)
 {
     int c = a + b;
-    std::cout << "\nint a = " << a << std::endl;
+    std::cout << "\nSegment 2" << std::endl;
+    std::cout << "int a = " << a << std::endl;
     std::cout << "int b = .000000000000001" << std::endl;
     std::cout << "The answer mathematically should be a + b > 0 since both a && b > 0" << std::endl;
     std::cout << "a + b = " << c << std::endl;
@@ -118,7 +123,8 @@ void integerDataTypePositive (int a, int b)
 void integerDataTypeNegative (int a, int b)
 {
     int c = a + b;
-    std::cout << "\nint a = " << a << std::endl;
+    std::cout << "\nSegment 3" << std::endl;
+    std::cout << "int a = " << a << std::endl;
     std::cout << "int b = " << b << std::endl;
     std::cout << "The answer mathematically should be a + b < 0 since both a && b < 0" << std::endl;
     std::cout << "a + b = " << c << std::endl;
@@ -127,13 +133,14 @@ void integerDataTypeNegative (int a, int b)
 void doubleDataType (double a, double b)
 {
     double c = a + b;
+    std::cout << "\nSegment 4" << std::endl;
     std::string boolStatement;
     boolStatement = "false";
     if (bool(c == 1) == 0)
     {
         boolStatement = "true";
     }
-    std::cout << "\ndouble a = " << a << std::endl;
+    std::cout << "double a = " << a << std::endl;
     std::cout << "double b = " << b << std::endl;
     std::cout << "The answer mathematically should be a + b > 1" << std::endl;
     std::cout << "a + b = " << c << std::endl;
@@ -142,7 +149,8 @@ void doubleDataType (double a, double b)
 
 void associativity(double a, double b, double c)
 {
-    std::cout << "\ndouble a = " << a << std::endl;
+    std::cout << "\nSegment 5" << std::endl;
+    std::cout << "double a = " << a << std::endl;
     std::cout << "double b = " << b << std::endl;
     std::cout << "double c = " << c << std::endl;
     std::cout << "Showing how (a+b)+c != (c+b)+a" << std::endl;
