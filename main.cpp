@@ -39,7 +39,19 @@ int main()
     double i = -1e+30;
     associativity(g, h, i);
 
+    // Power functions
+    std::cout << "pow(-2., 3) = " << pow(-2,3) << std::endl;
+    std::cout << "pow(-2., 3.0) = " << pow(-2,3) << std::endl;
+    std::cout << "pow(-2., 3.00000000001) = " << pow(-2,3) << std::endl;
+
+    // Memory size
+    std::cout << "Memory size of 1. = " << sizeof(1.) << std::endl;
+    std::cout << "Memory size of 1.F = " << sizeof(1.F) << std::endl;
+    std::cout << "Memory size of 1 = " << sizeof(1) << std::endl;
+    std::cout << "Memory size of '1' = " << sizeof('1') << std::endl;
+    std::cout << "Memory size of \"1\" = " << sizeof("1") << std::endl;
 }
+
 //  Unsigned int in C++ is from -4294967296 to 4294967295
 void unsignedIntegerDataType (unsigned int a, unsigned int b)
 {
