@@ -14,6 +14,7 @@ void integerDataTypeNegative(int, int);
 void doubleDataType(double, double);
 void associativity(double, double, double);
 void displayAscii();
+void squareRoot(double);
 
 int main()
 {
@@ -64,6 +65,9 @@ int main()
     // Displaying all printable characters on ASCII table
     displayAscii();
 
+    // Creating my own square root function
+    double z = 2.;
+    squareRoot(z);
 
 }
 
@@ -138,4 +142,16 @@ void displayAscii()
 
         std::cout << "\n";
     }
+}
+
+void squareRoot(double a)
+{
+    double xNew = a;
+    double xTemp;
+    do {
+        xTemp = xNew;
+        xNew = (xTemp + a / xTemp) / 2;
+    }
+    while( xNew != xTemp );
+    std::cout << "Square root of 2. = " << xNew << std::endl;
 }
