@@ -3,8 +3,6 @@
 * Name: Basic Data Types and Operations
 * Student ID: 915173797
 * Name: Benjamin Lewis
-*  File: fsdriver3.c
-*
 * **************************************************************/
 
 #include <iostream>
@@ -13,6 +11,7 @@ void unsignedIntegerDataType(unsigned int, unsigned int);
 void integerDataTypePositive(int, int);
 void integerDataTypeNegative(int, int);
 void doubleDataType(double, double);
+void associativity(double, double, double);
 
 int main()
 {
@@ -34,6 +33,11 @@ int main()
     double e = 1;
     double f = .000000000000001;
     doubleDataType(e, f);
+
+    double g = 1e-30;
+    double h = 1e+30;
+    double i = -1e+30;
+    associativity(g, h, i);
 
 }
 //  Unsigned int in C++ is from -4294967296 to 4294967295
@@ -79,4 +83,14 @@ void doubleDataType (double a, double b)
     std::cout << "The answer mathematically should be a + b > 1" << std::endl;
     std::cout << "a + b = " << c << std::endl;
     std::cout << "a + b == 1? " << boolStatement << std::endl;
+}
+
+void associativity(double a, double b, double c)
+{
+    std::cout << "\ndouble a = " << a << std::endl;
+    std::cout << "double b = " << b << std::endl;
+    std::cout << "double c = " << c << std::endl;
+    std::cout << "Showing how (a+b)+c != (c+b)+a" << std::endl;
+    std::cout << "(a+b)+c = " << (a + b) + c << std::endl;
+    std::cout << "a+(b+c) = " << a + (b + c) << std::endl;
 }
