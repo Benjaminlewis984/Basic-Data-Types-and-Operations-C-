@@ -6,12 +6,14 @@
 * **************************************************************/
 
 #include <iostream>
+#include <iomanip>
 
 void unsignedIntegerDataType(unsigned int, unsigned int);
 void integerDataTypePositive(int, int);
 void integerDataTypeNegative(int, int);
 void doubleDataType(double, double);
 void associativity(double, double, double);
+void displayAscii();
 
 int main()
 {
@@ -56,6 +58,11 @@ int main()
     double k = 3.;
     std::cout.precision(20);
     std::cout << "1./3. = " << std::fixed << (j / k) << std::endl;
+    std::cout << "The digits that are 3 repeating are correct. Once the precision reaches the double limit "
+                 "(which is after the 3's) the program will generate random, inaccurate numbers." << std::endl;
+
+    // Displaying all printable characters on ASCII table
+    displayAscii();
 
 
 }
@@ -70,7 +77,7 @@ void unsignedIntegerDataType (unsigned int a, unsigned int b)
     std::cout << "a + b = " << c << std::endl;
 }
 
-//  Unsigned int in C++ is from -2147483648 to 2147483647
+//  int in C++ is from -2147483648 to 2147483647
 void integerDataTypePositive (int a, int b)
 {
     int c = a + b;
@@ -113,4 +120,22 @@ void associativity(double a, double b, double c)
     std::cout << "Showing how (a+b)+c != (c+b)+a" << std::endl;
     std::cout << "(a+b)+c = " << (a + b) + c << std::endl;
     std::cout << "a+(b+c) = " << a + (b + c) << std::endl;
+}
+
+void displayAscii()
+{
+    int inc = 33;
+    // Prints 3 rows of all the printable ASCII characters
+    for(int rows = 33; rows < 64; rows++)
+    {
+        inc = rows;
+        while(inc <= 127)
+        {
+                std::cout << std::hex << std::setw(2) << std::setfill('0')
+                          << inc << "= " << std::setw(4) << std::setfill(' ') << char(inc) << " | ";
+            inc+=32;
+        }
+
+        std::cout << "\n";
+    }
 }
